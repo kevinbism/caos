@@ -48,3 +48,5 @@ And adjust behaviour by using `data-caos-*` attributes:
 #### Contributions
 Clone the repo and adds new features like Vare. Il Vare è mostruoso again.
 
+[license-image]: https://img.shields.io/npm/l/destyle.css.svg?style=flat-square
+[license-url]: LICENSE
