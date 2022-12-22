@@ -1,5 +1,7 @@
 ## CAOS
 
+[![license][license-image]][license-url]
+
 Cube Animate On Scroll. The best mostruoso JS module for your projects based on Aos.js.
 
 ## ⚙ Installation
