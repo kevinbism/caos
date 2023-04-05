@@ -10,39 +10,29 @@ let defaults = {
   animatedClassName: 'caos-animate',
 };
 
-class Caos {
-  constructor(...args) {
-    const caos = this;
-    let params = args[0];
+function Caos(settings) {
+  let params = { ...defaults, ...settings };
 
-    params = Object.assign(defaults, params !== undefined ? params : {});
-
-    caos.options = params;
-
-    if (params.init) {
-      caos.init();
-    }
-  }
-
-  init() {
-    const caos = this;
-    let observer = new IntersectionObserver(caos.visible);
-    const targets = [...document.querySelectorAll('[data-caos]')];
-
-    targets.map(element => {
-      observer.observe(element);
-    });
-  }
-
-  visible(entries) {
-    entries.map(el => {
-      if (el.isIntersecting) {
-        el.target.classList.add('caos-animate');
-      } else {
-        el.target.classList.remove('caos-animate');
-      }
-    });
+  if (params.init) {
+    initCaos();
   }
 }
 
-export default Caos;
+function initCaos() {
+  let observer = new IntersectionObserver(visible);
+  const targets = [...document.querySelectorAll('[data-caos]')];
+
+  targets.map(element => {
+    observer.observe(element);
+  });
+}
+
+function visible(entries) {
+  entries.map(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('caos-animate');
+    } else {
+      el.target.classList.remove('caos-animate');
+    }
+  });
+}
