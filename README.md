@@ -2,39 +2,50 @@
 
 [![license][license-image]][license-url]
 
-Cube Animate On Scroll. The best mostruoso JS module for your projects.
+Cube Animate On Scroll. La libreria più mostruosa per i tuoi progetti.
 
-## ⚙ Installation
+## ⚙ Installazione
 
 ### Basic
 
-Add styles in `<head>` or compile the SASS file:
+Aggiungi lo stile in `<head>`:
 
 ```html
-  <link rel="stylesheet" href="./dist/caos.css" />
+  <link rel="stylesheet" href="caos.css">
 ```
 
-Import the module in your main JS file script and initialize CAOS:
+Include il file `javascript` nel tuo progetto:
+```html
+  <script src="caos.js"></script>
+```
+
+Successivamente richiama l'oggetto Caos. I valori indicati sono quelli di default.
 ```js
-  import Caos from './modules/core.esm.js';
-
-  const caos = new Caos();
+  const caos = new Caos({
+    init: true,
+    offset: 500,
+    delay: 0,
+    easing: 'ease',
+    duration: 400,
+    once: true,
+    animatedClassName: 'caos-animate',
+  });
 ```
 
-### New features coming soon
+### Nuove funzionalità in arrivo
 
 - Il Vare è mostruoso
 
 
-## 🤔 How to use it?
+## 🤔 Come configurare Caos?
 
-### 1. Set animation using `data-caos` attribute:
+### 1. Inserisci l'animazione usando l'attributo `data-caos`:
 
 ```html
   <div data-caos="fade-in"></div>
 ```
 
-And adjust behaviour by using `data-caos-*` attributes:
+Puoi configurare singolarmente ogni elemento con i vari attributi `data-caos-*`:
 ```html
   <div
     data-caos="fade-up"
@@ -45,8 +56,8 @@ And adjust behaviour by using `data-caos-*` attributes:
   </div>
 ```
 
-#### Contributions
-Clone the repo and adds new features like Vare. Il Vare è mostruoso again.
+#### Contributi
+Clona la repository e aggiungi nuove funzionalità come il Vare. Il Vare è mostruoso di nuovo.
 
 [license-image]: https://img.shields.io/npm/l/destyle.css.svg?style=flat-square
 [license-url]: LICENSE
