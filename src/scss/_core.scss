@@ -1,7 +1,6 @@
 // Generate Duration && Delay
 [data-aos] {
   @for $i from 1 through 10 {
-
     body[data-aos-duration='#{$i * 100}'] &,
     &[data-aos][data-aos-duration='#{$i * 100}'] {
       transition-duration: #{$i * 100}ms;
@@ -18,10 +17,10 @@
   }
 }
 
-[data-aos] {
+[data-caos] {
   pointer-events: none;
 
-  &.aos-animate {
+  &.caos-animate {
     pointer-events: auto;
   }
 }
