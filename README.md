@@ -29,6 +29,7 @@ Successivamente richiama l'oggetto Caos. I valori indicati sono quelli di defaul
     duration: 400,
     once: true,
     animatedClassName: 'caos-animate',
+    disableMobile: false,
   });
 ```
 
