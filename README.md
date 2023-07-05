@@ -2,7 +2,7 @@
 
 [![license][license-image]][license-url]
 
-Cube Animate On Scroll. La libreria più mostruosa per i tuoi progetti.
+Cube Animate On Scroll. La libreria leggera per i tuoi progetti.
 
 ## ⚙ Installazione
 
@@ -34,7 +34,7 @@ Successivamente richiama l'oggetto Caos. I valori indicati sono quelli di defaul
 
 ### Nuove funzionalità in arrivo
 
-- Il Vare è mostruoso
+- Work in progress.
 
 
 ## 🤔 Come configurare Caos?
@@ -57,7 +57,7 @@ Puoi configurare singolarmente ogni elemento con i vari attributi `data-caos-*`:
 ```
 
 #### Contributi
-Clona la repository e aggiungi nuove funzionalità come il Vare. Il Vare è mostruoso di nuovo.
+Clona la repository e aggiungi nuove funzionalità. Ogni contributo è ben gradito.
 
 [license-image]: https://img.shields.io/npm/l/destyle.css.svg?style=flat-square
 [license-url]: LICENSE
