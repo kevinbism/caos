@@ -6,15 +6,19 @@ let defaults = {
   duration: 400,
   once: true,
   animatedClassName: 'caos-animate',
+  disableMobile: false,
 };
 
 class Caos {
   constructor(settings) {
     this.options = { ...defaults, ...settings };
+    let matchMediaQuery = this.options.disableMobile ? window.matchMedia('(min-width: 768px)').matches : true;
 
-    if (this.options.init) {
+    if (this.options.init && matchMediaQuery) {
       this.initCaos();
       this.setOptions();
+    } else {
+      this.destroy();
     }
   }
 
@@ -26,11 +30,11 @@ class Caos {
     };
 
     let observer = new IntersectionObserver(this.visible, options);
-    const targets = [...document.querySelectorAll('[data-caos]')];
+    const targets = document.querySelectorAll('[data-caos]');
 
-    targets.map(element => {
+    for (const element of targets) {
       observer.observe(element);
-    });
+    }
   };
 
   visible = entries => {
@@ -51,7 +55,16 @@ class Caos {
     const easing = this.options.easing;
     let body = getEl('body');
 
-    body.style.cssText += `--caos-duration: ${duration}ms; --caos-delay: ${delay}ms; --caos-easing: ${easing}`;
+    const cssStyles = [`--caos-duration: ${duration}ms`, `--caos-delay: ${delay}ms`, `--caos-easing: ${easing}`];
+
+    body.style.cssText += cssStyles.join('; ');
+  };
+
+  destroy = () => {
+    const targets = document.querySelectorAll('[data-caos]');
+    targets.forEach(element => {
+      element.removeAttribute('data-caos');
+    });
   };
 }
 
@@ -63,16 +76,19 @@ function applyCustomOptions(element) {
   const duration = element.dataset.caosDuration;
   const delay = element.dataset.caosDelay;
   const easing = element.dataset.caosEasing;
+  const cssTextArray = [];
 
   if (duration) {
-    element.style.cssText += `--caos-duration: ${duration}ms`;
+    cssTextArray.push(`--caos-duration: ${duration}ms`);
   }
 
   if (delay) {
-    element.style.cssText += `--caos-delay: ${delay}ms`;
+    cssTextArray.push(`--caos-delay: ${delay}ms`);
   }
 
   if (easing) {
-    element.style.cssText += `--caos-easing: ${easing}`;
+    cssTextArray.push(`--caos-easing: ${easing}`);
   }
+
+  element.style.cssText += cssTextArray.join('; ');
 }
