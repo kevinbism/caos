@@ -2,7 +2,7 @@
 
 [![license][license-image]][license-url]
 
-Cube Animate On Scroll. La libreria leggera per i tuoi progetti. Pagina demo [qui][https://kevinbism.github.io/caos/].
+Cube Animate On Scroll. La libreria leggera per i tuoi progetti. Pagina demo [qui](https://kevinbism.github.io/caos/).
 
 ## ⚙ Installazione
 
