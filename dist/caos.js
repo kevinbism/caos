@@ -7,13 +7,14 @@ const defaults = {
   once: true,
   animatedClassName: 'caos-animate',
   disableMobile: false,
+  matchMedia: '768px',
 };
 
 class Caos {
   constructor(settings) {
     this.options = { ...defaults, ...settings };
     const matchMediaQuery = this.options.disableMobile
-      ? checkIsDesktop() && window.matchMedia('(min-width: 768px)').matches
+      ? checkIsDesktop() && window.matchMedia(`(min-width: ${this.options.matchMedia})`).matches
       : true;
 
     if (this.options.init && matchMediaQuery) {
