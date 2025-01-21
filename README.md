@@ -35,12 +35,9 @@ const caos = new Caos({
   once: true,
   animatedClassName: 'caos-animate',
   disableMobile: false,
+  matchMedia: '768px',
 });
 ```
-
-### Nuove funzionalità in arrivo
-
-- Work in progress.
 
 ## 🤔 Come configurare Caos?
 
