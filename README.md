@@ -1,4 +1,4 @@
-## CAOS
+# CAOS
 
 [![license][license-image]][license-url]
 
@@ -44,7 +44,7 @@ const caos = new Caos({
 
 ## 🤔 Come configurare Caos?
 
-### 1. Inserisci l'animazione usando l'attributo `data-caos`:
+### 1. Inserisci l'animazione usando l'attributo `data-caos`
 
 ```html
 <div data-caos="fade-in"></div>
