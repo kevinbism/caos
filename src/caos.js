@@ -13,9 +13,9 @@ const caosDefaults = {
 class Caos {
   constructor(settings) {
     this.options = { ...caosDefaults, ...settings };
-    const matchMediaQuery = this.options.disableMobile
-      ? checkIsDesktop() && window.matchMedia(`(min-width: ${this.options.matchMedia})`).matches
-      : true;
+    const matchMediaQuery =
+      !this.options.disableMobile ||
+      (checkIsDesktop() && window.matchMedia(`(min-width: ${this.options.matchMedia})`).matches);
 
     if (this.options.init && matchMediaQuery) {
       this.initCaos();
