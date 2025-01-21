@@ -17,15 +17,15 @@
 .css .hljs-id,
 .css .hljs-class,
 .css .hljs-pseudo {
-  color: #B6E2D3;
+  color: #b6e2d3;
 }
 
 .hljs-attribute {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .hljs-attr {
-  color: #EF7C8E;
+  color: #ef7c8e;
 }
 
 /* K-R Orange */
@@ -35,13 +35,13 @@
 .hljs-literal,
 .hljs-params,
 .hljs-constant {
-  color: #E65F5C;
+  color: #e65f5c;
 }
 
 /* K-R Yellow */
 .ruby .hljs-class .hljs-title,
 .css .hljs-rule .hljs-attribute {
-  color: #F1A8A7;
+  color: #f1a8a7;
 }
 
 /* K-R Green */
@@ -51,13 +51,13 @@
 .hljs-header,
 .ruby .hljs-symbol,
 .xml .hljs-cdata {
-  color: #F1A8A7;
+  color: #f1a8a7;
 }
 
 /* K-R Aqua */
 .hljs-title,
 .css .hljs-hexcolor {
-  color: #25CED1;
+  color: #25ced1;
 }
 
 /* K-R Blue */
@@ -81,7 +81,7 @@
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #383D3B;
+  background: #383d3b;
   color: #979db4;
   padding: 2em;
   -webkit-text-size-adjust: none;

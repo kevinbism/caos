@@ -1,56 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>CAOS - Cube Animate On Scroll</title>
+    <link
+      rel="stylesheet"
+      href="./dist/caos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/prism/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAOS - Cube Animate On Scroll</title>
-  <link rel="stylesheet" href="./dist/caos.css">
-  <link rel="stylesheet" href="./src/libs/prism/style.css">
-  <link rel="stylesheet" href="./src/css/style.css">
-</head>
+  <body>
+    <header>
+      <h1 class="title">CAOS</h1>
+      <h2 class="subtitle">Cube Animate On Scroll</h2>
+    </header>
+    <section>
+      <div
+        class="item"
+        data-caos="fade-up"
+      >
+        <pre><code class="language-html">&lt;div data-caos="fade-up">&lt;/div></code></pre>
+        <figure>
+          <picture
+            ><img
+              src="https://picsum.photos/800.webp?random=1"
+              alt="Immagine 1"
+          /></picture>
+        </figure>
+      </div>
+      <div
+        class="item"
+        data-caos="fade-down"
+      >
+        <pre><code class="language-html">&lt;div data-caos="fade-down">&lt;/div></code></pre>
+        <figure>
+          <picture
+            ><img
+              src="https://picsum.photos/800.webp?random=2"
+              alt="Immagine 2"
+          /></picture>
+        </figure>
+      </div>
+      <div
+        class="item"
+        data-caos="fade-left"
+      >
+        <pre><code class="language-html">&lt;div data-caos="fade-left">&lt;/div></code></pre>
+        <figure>
+          <picture
+            ><img
+              src="https://picsum.photos/800.webp?random=3"
+              alt="Immagine 3"
+          /></picture>
+        </figure>
+      </div>
+      <div
+        class="item"
+        data-caos="fade-right"
+      >
+        <pre><code class="language-html">&lt;div data-caos="fade-right">&lt;/div></code></pre>
+        <figure>
+          <picture
+            ><img
+              src="https://picsum.photos/800.webp?random=4"
+              alt="Immagine 4"
+          /></picture>
+        </figure>
+      </div>
+    </section>
 
-<body>
-  <header>
-    <h1 class="title">CAOS</h1>
-    <h2 class="subtitle">Cube Animate On Scroll</h2>
-  </header>
-  <section>
-    <div class="item" data-caos="fade-up">
-      <pre><code class="language-html">&lt;div data-caos="fade-up">&lt;/div></code></pre>
-      <figure>
-        <picture><img src="https://picsum.photos/800.webp?random=1" alt="Immagine 1"></picture>
-      </figure>
-    </div>
-    <div class="item" data-caos="fade-down">
-      <pre><code class="language-html">&lt;div data-caos="fade-down">&lt;/div></code></pre>
-      <figure>
-        <picture><img src="https://picsum.photos/800.webp?random=2" alt="Immagine 2"></picture>
-      </figure>
-    </div>
-    <div class="item" data-caos="fade-left">
-      <pre><code class="language-html">&lt;div data-caos="fade-left">&lt;/div></code></pre>
-      <figure>
-        <picture><img src="https://picsum.photos/800.webp?random=3" alt="Immagine 3"></picture>
-      </figure>
-    </div>
-    <div class="item" data-caos="fade-right">
-      <pre><code class="language-html">&lt;div data-caos="fade-right">&lt;/div></code></pre>
-      <figure>
-        <picture><img src="https://picsum.photos/800.webp?random=4" alt="Immagine 4"></picture>
-      </figure>
-    </div>
-  </section>
+    <footer>© Built by Blastness Team</footer>
 
-  <footer>
-    © Built by Blastness Team
-  </footer>
-
-  <script src="./dist/caos.js"></script>
-  <script src="./src/js/index.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
-
+    <script src="./dist/caos.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
