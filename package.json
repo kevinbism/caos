@@ -1,0 +1,21 @@
+{
+  "name": "caos",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src -d dist --out-file-extension .min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "animation",
+    "javascript"
+  ],
+  "author": "Kevin Ramirez",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-minify": "^0.5.2"
+  },
+  "browserslist": "> 0.25%, not dead"
+}
