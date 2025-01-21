@@ -1,4 +1,4 @@
-let defaults = {
+const defaults = {
   init: true,
   offset: 500,
   delay: 0,
@@ -12,7 +12,9 @@ let defaults = {
 class Caos {
   constructor(settings) {
     this.options = { ...defaults, ...settings };
-    let matchMediaQuery = this.options.disableMobile ? window.matchMedia('(min-width: 768px)').matches : true;
+    const matchMediaQuery = this.options.disableMobile
+      ? window.matchMedia('(min-width: 768px)').matches
+      : true;
 
     if (this.options.init && matchMediaQuery) {
       this.initCaos();
@@ -23,13 +25,13 @@ class Caos {
   }
 
   initCaos = () => {
-    let options = {
+    const options = {
       root: null,
       rootMargin: '0px',
       threshold: this.options.offset / 1000,
     };
 
-    let observer = new IntersectionObserver(this.visible, options);
+    const observer = new IntersectionObserver(this.visible, options);
     const targets = document.querySelectorAll('[data-caos]');
 
     for (const element of targets) {
@@ -39,7 +41,7 @@ class Caos {
 
   visible = entries => {
     entries.map(el => {
-      let caosHTML = getEl(el.target);
+      const caosHTML = getEl(el.target);
       applyCustomOptions(caosHTML);
       if (el.isIntersecting) {
         el.target.classList.add(this.options.animatedClassName);
@@ -53,23 +55,27 @@ class Caos {
     const duration = this.options.duration;
     const delay = this.options.delay;
     const easing = this.options.easing;
-    let body = getEl('body');
+    const body = getEl('body');
 
-    const cssStyles = [`--caos-duration: ${duration}ms`, `--caos-delay: ${delay}ms`, `--caos-easing: ${easing}`];
+    const cssStyles = [
+      `--caos-duration: ${duration}ms`,
+      `--caos-delay: ${delay}ms`,
+      `--caos-easing: ${easing}`,
+    ];
 
     body.style.cssText += cssStyles.join('; ');
   };
 
   destroy = () => {
     const targets = document.querySelectorAll('[data-caos]');
-    targets.forEach(element => {
+    for (const element of targets) {
       element.removeAttribute('data-caos');
-    });
+    }
   };
 }
 
 function getEl(el, context = document) {
-  return typeof el === 'string' ? context['querySelector'](el) : el;
+  return typeof el === 'string' ? context.querySelector(el) : el;
 }
 
 function applyCustomOptions(element) {
