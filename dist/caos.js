@@ -13,7 +13,7 @@ class Caos {
   constructor(settings) {
     this.options = { ...defaults, ...settings };
     const matchMediaQuery = this.options.disableMobile
-      ? window.matchMedia('(min-width: 768px)').matches
+      ? checkIsDesktop() && window.matchMedia('(min-width: 768px)').matches
       : true;
 
     if (this.options.init && matchMediaQuery) {
@@ -72,6 +72,12 @@ class Caos {
       element.removeAttribute('data-caos');
     }
   };
+}
+
+function checkIsDesktop() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile = /iphone|ipad|ipod|android|blackberry|windows phone/g.test(userAgent);
+  return !isMobile;
 }
 
 function getEl(el, context = document) {
