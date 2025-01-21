@@ -1,4 +1,4 @@
-const defaults = {
+const caosDefaults = {
   init: true,
   offset: 500,
   delay: 0,
@@ -12,7 +12,7 @@ const defaults = {
 
 class Caos {
   constructor(settings) {
-    this.options = { ...defaults, ...settings };
+    this.options = { ...caosDefaults, ...settings };
     const matchMediaQuery = this.options.disableMobile
       ? checkIsDesktop() && window.matchMedia(`(min-width: ${this.options.matchMedia})`).matches
       : true;
